@@ -1,0 +1,17 @@
+.header-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
