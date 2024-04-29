@@ -1,8 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
-import ProductsPage from "./components/pages/PhonesPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
+import ProductsPage from "./components/pages/ProductsPage";
+import BlogPage from "./components/pages/BlogPage";
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/phones" element={<PhonesPage />} />
-          <Route path="/laptops" element={<LaptopsPage />} />
-          <Route path="/consoles" element={<ConsolesPage />} />
+          <Route path="/phones" element={<ProductsPage type={"phone"} />} />
+          <Route path="/laptops" element={<ProductsPage type={"laptop"} />} />
+          <Route path="/consoles" element={<ProductsPage type={"console"} />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

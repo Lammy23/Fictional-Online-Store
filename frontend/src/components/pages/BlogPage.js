@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../sections/Header";
 
-function PhonesPage() {
+function BlogPage() {
   return (
     <div>
       <Header />
-      <div>Products go here</div>
+      <div>Blog goes here</div>
     </div>
   );
 }
 
-export default PhonesPage;
+export default BlogPage;
