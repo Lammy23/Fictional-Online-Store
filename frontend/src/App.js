@@ -8,15 +8,25 @@ import BlogPage from "./components/pages/BlogPage";
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/phones" element={<ProductsPage type={"phone"} />} />
-          <Route path="/laptops" element={<ProductsPage type={"laptop"} />} />
-          <Route path="/consoles" element={<ProductsPage type={"console"} />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+      <div className="app-background">
+        <div className="app-foreground">
+          <div className="app-content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/phones" element={<ProductsPage type={"phone"} />} />
+              <Route
+                path="/laptops"
+                element={<ProductsPage type={"laptop"} />}
+              />
+              <Route
+                path="/consoles"
+                element={<ProductsPage type={"console"} />}
+              />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </Router>
   );

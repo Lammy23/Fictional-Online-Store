@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+// npm i --save @fortawesome/fontawesome-svg-core
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
