@@ -1,9 +1,10 @@
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import NotFoundPage from "./components/pages/NotFoundPage";
 import ProductsPage from "./components/pages/ProductsPage";
 import BlogPage from "./components/pages/BlogPage";
+
+import "./style/App.css"; // Styling
 
 function App() {
   return (

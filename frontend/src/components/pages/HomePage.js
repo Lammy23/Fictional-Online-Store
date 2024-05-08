@@ -1,8 +1,10 @@
 import React from "react";
-import Header from "../sections/Header";
+import Header from "../Header";
 
 /*Styling*/
-import "../../style/pages/HomePage.css";
+import "../../style/Components.css";
+import Carousel from "../Carousel";
+import { featuredProducts } from "../../data/products";
 
 function HomePage() {
   return (
@@ -11,10 +13,7 @@ function HomePage() {
       <h1 className="home-call-to-action">
         Best tech in the whole tri-state area.
       </h1>
-      {/* <Carousel breakPoints={breakPoints}>
-        <Item>One</Item>
-        <Item>Two</Item>
-      </Carousel> */}
+      <Carousel featuredProducts={featuredProducts}/>
     </div>
   );
 }

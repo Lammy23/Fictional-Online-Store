@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../sections/Header";
+import Header from "../Header";
 
 function BlogPage() {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-// npm i --save @fortawesome/fontawesome-svg-core
+// Instructions to install in README.md
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -8,7 +8,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-import "../../style/sections/Header.css"; // Styling
+import "../style/Components.css";
 
 function Header() {
   useEffect(() => {}, []);
@@ -25,8 +25,6 @@ function Header() {
         {/* Add the logo image here */}
         <div>
           <FontAwesomeIcon className="header-icons" icon={faUser} />
-          <FontAwesomeIcon className="header-icons" icon={faHeart} />
-          <FontAwesomeIcon className="header-icons" icon={faCartShopping} />
         </div>
       </div>
       <nav className="nav-bar">
