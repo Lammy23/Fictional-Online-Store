@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 // Import css files
@@ -18,7 +18,7 @@ function Carousel({ featuredProducts }) {
   };
 
   return (
-      <Slider {...settings} className="center">
+      <Slider {...settings}>
         {featuredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
