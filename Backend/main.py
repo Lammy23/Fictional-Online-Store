@@ -1,8 +1,8 @@
-from flask import Flask, redirect, render_template, request, session, url_for, flash, sessions
-from flask_login import LoginManager, current_user, login_required, login_user, logout_user, UserMixin
+from flask import Flask, jsonify
 
-
-# Initialize Flask application
 app = Flask(__name__)
-# Secret key required for sessions
-app.secret_key = 'richardarannonu07036232511chinem'
+
+@app.route('/api/data')
+def get_data():
+    data = {'message': 'Hello from Flask!'}
+    return jsonify(data)
