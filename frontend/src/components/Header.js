@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
-  faHeart,
-  faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
-
-import "../style/Components.css";
 
 function Header() {
   useEffect(() => {}, []);

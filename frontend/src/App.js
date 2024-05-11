@@ -4,7 +4,7 @@ import NotFoundPage from "./components/pages/NotFoundPage";
 import ProductsPage from "./components/pages/ProductsPage";
 import BlogPage from "./components/pages/BlogPage";
 
-import "./style/App.css"; // Styling
+import "./App.css"; // Styling
 
 function App() {
   return (
