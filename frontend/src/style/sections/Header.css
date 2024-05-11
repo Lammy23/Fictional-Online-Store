@@ -1,0 +1,41 @@
+.header-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-main div {
+    padding: 0px 0px 10px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #331A2E;
+}
+
+.header-corner {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-size: small;
+}
+
+.header-corner a {
+    padding: 5px;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-icons {
+    padding: 5px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
