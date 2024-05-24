@@ -1,37 +1,23 @@
-import React from "react";
-import HeartButton from "./buttons/HeartButton";
-import CartButton from "./buttons/CartButton";
-import defaultImage from "../images/camera-photo.jpg";
+import React, { useState } from "react";
 
-import "../style/Components.css";
+function toggleAnimationState(animationState, setAnimationState) {
+  if (animationState === "paused") setAnimationState("running");
+  else if (animationState === "running") setAnimationState("paused");
+}
 
-const defaultProduct = {
-  productName: "not found",
-  imiage: defaultImage,
-  imageAlt: "product",
-};
+function handleAnimation(animationState, setAnimationState) {
+  toggleAnimationState(animationState, setAnimationState);
+}
 
-function ProductCard({ product, width }) {
-  const { image, imageAlt, productName } = product || defaultProduct;
-  // Image as background
+function ProductCard({key}) {
+  const [animationState, setAnimationState] = useState("paused");
   return (
     <div
       className="product-card"
-      style={{ backgroundColor: "grey", width: width }}
+      style={{ animationPlayState: animationState }}
+      onClick={() => handleAnimation(animationState, setAnimationState)}
     >
-      <HeartButton />
-      <img src={image} alt={`${imageAlt}`} width={"100%"} />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          width: "100%",
-        }}
-      >
-        <p>{productName}</p>
-        <CartButton />
-      </div>
+      <p>Product card here!</p>
     </div>
   );
 }

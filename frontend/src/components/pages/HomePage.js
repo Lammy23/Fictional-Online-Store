@@ -1,8 +1,7 @@
 import React from "react";
+import Carousel from "../Carousel";
+import ProductCard from "../ProductCard";
 import Header from "../Header";
-
-/*Styling*/
-import { featuredProducts } from "../../data/products";
 
 function HomePage() {
   return (
