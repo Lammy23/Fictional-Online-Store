@@ -50,6 +50,12 @@ a:active {
   background-color: var(--primary-color);
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
 .row {
   display: flex;
   flex-direction: row;
