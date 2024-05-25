@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,18 +24,16 @@ function range(start, end) {
 function Carousel() {
   return (
     <div>
-      <Swiper
+      <Swiper style={{ width:"1000px"}}
         modules={[EffectCoverflow, Pagination, Navigation]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
-        loop={false}
+        loop={true}
         slidesPerView={3}
-        spaceBetween={1}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
           modifier: 5,
           slideShadows: false,
         }}
@@ -45,7 +43,7 @@ function Carousel() {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {range(5).map((index) => (
-          <SwiperSlide>
+          <SwiperSlide style={{display: "flex", justifyContent:"center"}}>
             <ProductCard />
           </SwiperSlide>
         ))}

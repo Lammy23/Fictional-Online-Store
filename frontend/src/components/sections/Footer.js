@@ -8,8 +8,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import AppStore from "./svg/AppStore";
-import PlayStore from "./svg/PlayStore";
+import AppStore from "../svg/AppStore";
+import PlayStore from "../svg/PlayStore";
 
 const styles = {
   brand: {

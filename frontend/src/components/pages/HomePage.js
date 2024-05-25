@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../Header";
-import NavBar from "../NavBar";
-import CTA from "../CTA";
-import Accolades from "../Accolades";
-import Footer from "../Footer";
-import Carousel from "../Carousel";
+import Header from "../sections/Header";
+import NavBar from "../sections/NavBar";
+import CTA from "../sections/CTA";
+import Accolades from "../sections/Accolades";
+import Footer from "../sections/Footer";
+import Carousel from "../sections/Carousel";
 
 function HomePage() {
   return (
