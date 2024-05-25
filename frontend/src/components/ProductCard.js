@@ -1,23 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
+import LaptopSketch from "./svg/LaptopSketch";
+import HeartButton from "./buttons/HeartButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
-function toggleAnimationState(animationState, setAnimationState) {
-  if (animationState === "paused") setAnimationState("running");
-  else if (animationState === "running") setAnimationState("paused");
-}
-
-function handleAnimation(animationState, setAnimationState) {
-  toggleAnimationState(animationState, setAnimationState);
-}
-
-function ProductCard({key}) {
-  const [animationState, setAnimationState] = useState("paused");
+function ProductCard({ key }) {
   return (
     <div
-      className="product-card"
-      style={{ animationPlayState: animationState }}
-      onClick={() => handleAnimation(animationState, setAnimationState)}
+      className="outline-button"
+      style={{ backgroundColor: "white", width: "300px", height: "300px" }}
     >
-      <p>Product card here!</p>
+      <div style={{ position: "absolute", top: "50px" }}>
+        <LaptopSketch />
+      </div>
+      <div style={{ position: "absolute", top: "15px", right: "15px" }}>
+        <HeartButton />
+      </div>
+      <div
+        style={{
+          borderTop: "2px solid",
+          borderTopColor: "inherit",
+          position: "absolute",
+          bottom: "15px",
+          padding: "15px",
+          width: "100%",
+        }}
+      >
+        <div className="row" style={{ flexDirection: "space-between" }}>
+          <div className="column">
+            <p>Spacetech 4000</p>
+            <div style={{ height: "10px" }} />
+            <p>$4,4950</p>
+          </div>
+          <FontAwesomeIcon icon={faShoppingBag} />
+        </div>
+      </div>
     </div>
   );
 }

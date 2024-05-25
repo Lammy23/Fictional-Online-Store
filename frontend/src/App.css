@@ -1,50 +1,148 @@
+/* General */
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family: "Lato";
+}
+
+a {
+  color: var(--strong-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+/* CSS Variables */
+@property --primary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #d9d9d9;
+}
+
+@property --secondary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: white;
+}
+
+@property --strong-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: black;
+}
+
+@property --vertical-padding {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 25px;
+}
+
+/* Containers */
+/* Containers -> divs that can't necessarily be clicked */
+.bg-colored {
+  background-color: var(--primary-color);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: inherit;
+  width: inherit;
+}
+
+.padding {
+  padding: var(--vertical-padding);
+}
+
+/* Buttons */
+/* Button -> anything that can be clicked */
+.normal-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--strong-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+}
+
+.icon-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+.outline-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  height: 50px;
+}
+
+#search-button {
+  border-radius: 25px;
+  padding: 0px 25px 0px 25px;
 }
 
 /* Carousel */
-  .carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    overflow: scroll;
-    width: 980px;
-  }
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  overflow: scroll;
+  width: 980px;
+}
 
-  .mover {
-    animation: carousel 10s ease-in-out 0s 2 normal both;
-    animation-play-state: paused;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-  }
-
-/* ProductCard */
-.product-card {
-  /* animation: carousel 3s linear 0s infinite normal both;
-  animation-play-state: paused; */
-  min-width: 300px;
-  min-height: 300px;
-  background-color: grey;
-  border: 2px solid black;
-  margin: 0px 10px 0px 10px;
+.mover {
+  animation: carousel 10s ease-in-out 0s 2 normal both;
+  animation-play-state: paused;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 
 @keyframes carousel {
   0% {
-    transform: translate(0%)
+    transform: translate(0%);
     /* margin-left: 0%; */
   }
 
   50% {
-    transform: translate(-50%)
+    transform: translate(-50%);
   }
 
   100% {
-    transform: translate(-100%)
+    transform: translate(-100%);
   }
 }
